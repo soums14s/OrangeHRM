@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [OrangeHRM]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.OrangeHRM.utility.ExtentManager"/>
+  </listeners>
+  <test thread-count="5" name="OrangeHRM Test(failed)">
+    <classes>
+      <class name="com.OrangeHRM.testCases.TC_002">
+        <methods>
+          <include name="OrangeHRM" invocation-numbers="1"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.OrangeHRM.testCases.TC_002 -->
+    </classes>
+  </test> <!-- OrangeHRM Test(failed) -->
+</suite> <!-- Failed suite [OrangeHRM] -->
