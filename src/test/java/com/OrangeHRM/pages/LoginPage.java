@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.OrangeHRM.utility.BaseClass;
 import com.OrangeHRM.utility.ExtentManager;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 
 import bsh.org.objectweb.asm.Constants;
@@ -27,12 +28,13 @@ public class LoginPage extends ExtentManager {
 		PageFactory.initElements(driver, this);		
 	}
 	
-	public void OrangeHRMLogin(String uName, String passwd) throws InterruptedException {
+	public void OrangeHRMLogin(String uName, String passwd) throws InterruptedException, IOException {
 		username_Txt.sendKeys(uName);
 		Thread.sleep(5000);
 		password_Txt.sendKeys(passwd);
 		Thread.sleep(5000);
 		loginBtn.click();
+
 		Thread.sleep(5000);
 		
 	

@@ -25,7 +25,7 @@ public static WebDriver driver;
 	
 	@BeforeTest
 	public void setUp() throws InterruptedException, IOException {
-		System.setProperty("webdriver.chrome.driver", Constants.chromePath);
+		//System.setProperty("webdriver.chrome.driver", Constants.chromePath);
 		driver=new ChromeDriver();		
 		driver.get(Constants.url);
 		driver.manage().window().maximize();
@@ -42,7 +42,7 @@ public static WebDriver driver;
 		
 		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
 		File source = takesScreenshot.getScreenshotAs(OutputType.FILE);
-		String screenshotPath = System.getProperty("user.dir") + "\\ScreenShots\\" + screenshotName + "_" + timeStamp + ".png";
+		String screenshotPath = System.getProperty("user.dir") + "/ScreenShots/" + screenshotName + "_" + timeStamp + ".png";
 		try {
 			FileUtils.copyFile(source, new File(screenshotPath));
 		} catch (Exception e) {

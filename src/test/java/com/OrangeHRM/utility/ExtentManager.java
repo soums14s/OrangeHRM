@@ -42,13 +42,7 @@ public class ExtentManager extends TestListenerAdapter {
 	{
 		logger=extent.createTest(result.getName()); 
 		logger.log(Status.PASS,MarkupHelper.createLabel(result.getName(),ExtentColor.GREEN));
-try {
-			
-			String imagePath=BaseClass.fCaptureScreenShot(BaseClass.driver, result.getName());
-			logger.addScreenCaptureFromPath(imagePath);
-		}catch(Exception e) {
-			System.out.println("Screenshot not captured "+e.getMessage());
-		}
+
 	}
 	
 	public void onTestFailure(ITestResult result)
